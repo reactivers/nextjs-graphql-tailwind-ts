@@ -1,10 +1,10 @@
-import { ApolloClient, HttpLink, InMemoryCache, split } from '@apollo/client';
-import { GraphQLWsLink } from '@apollo/client/link/subscriptions';
-import { getMainDefinition } from '@apollo/client/utilities';
-import { createClient } from 'graphql-ws';
-import { GQL_HTTP_API, GQL_WS_API } from 'utils/constants';
-import { isBrowser } from 'utils/functions';
-import { Dict } from 'utils/types';
+import { ApolloClient, HttpLink, InMemoryCache, split } from "@apollo/client";
+import { GraphQLWsLink } from "@apollo/client/link/subscriptions";
+import { getMainDefinition } from "@apollo/client/utilities";
+import { createClient } from "graphql-ws";
+import { GQL_HTTP_API, GQL_WS_API } from "utils/constants";
+import { isBrowser } from "utils/functions";
+import { Dict } from "utils/types";
 
 let initialHeaders: Dict<string> = isBrowser() ? {} : {};
 const httpLink = ({ headers }: { headers?: object } = {}) =>
@@ -16,7 +16,7 @@ const httpLink = ({ headers }: { headers?: object } = {}) =>
   });
 
 const wsLink = ({ headers = {} }: { headers?: object } = {}) =>
-  typeof window !== 'undefined'
+  typeof window !== "undefined"
     ? new GraphQLWsLink(
         createClient({
           url: GQL_WS_API,
@@ -31,12 +31,13 @@ const wsLink = ({ headers = {} }: { headers?: object } = {}) =>
     : null;
 
 const splitLink = (params?: any) =>
-  typeof window !== 'undefined'
+  typeof window !== "undefined"
     ? split(
         ({ query }) => {
           const definition = getMainDefinition(query);
           return (
-            definition.kind === 'OperationDefinition' && definition.operation === 'subscription'
+            definition.kind === "OperationDefinition" &&
+            definition.operation === "subscription"
           );
         },
         wsLink(params)!,
@@ -70,7 +71,9 @@ const addHeaders = ({ headers } = { headers: {} }) => {
   return newApiClient;
 };
 
-const removeHeaders = ({ headers }: { headers: string[] } = { headers: [] }) => {
+const removeHeaders = (
+  { headers }: { headers: string[] } = { headers: [] }
+) => {
   headers.forEach((header) => {
     delete initialHeaders[header];
   });

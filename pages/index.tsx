@@ -1,5 +1,5 @@
-import { useGetMoviesQuery } from 'generated/graphql';
-import { NextPage } from 'next/types';
+import { useGetMoviesQuery } from "generated/graphql";
+import { NextPage } from "next/types";
 
 const Home: NextPage = () => {
   const { data } = useGetMoviesQuery();

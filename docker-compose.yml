@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   nextjs-app:
     build:
@@ -6,4 +6,4 @@ services:
     restart: always
     container_name: nextjs-graphql-tailwind-ts
     ports:
-      - '4050:3000'
+      - "4050:3000"

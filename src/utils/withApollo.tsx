@@ -1,10 +1,10 @@
-import { ApolloProvider } from '@apollo/client';
-import { addHeaders, getApiClient, removeHeaders } from 'apollo/client';
-import nextWithApollo from 'next-with-apollo';
-import { useRouter } from 'next/router';
-import { useCallback, useState } from 'react';
-import { TOKEN_KEY_NAME } from './constants';
-import { isBrowser } from './functions';
+import { ApolloProvider } from "@apollo/client";
+import { addHeaders, getApiClient, removeHeaders } from "apollo/client";
+import nextWithApollo from "next-with-apollo";
+import { useRouter } from "next/router";
+import { useCallback, useState } from "react";
+import { TOKEN_KEY_NAME } from "./constants";
+import { isBrowser } from "./functions";
 
 let initialHeaders = isBrowser()
   ? {
@@ -28,15 +28,21 @@ const withApollo = nextWithApollo(
     render: ({ Page, props }) => {
       const [appApiClient, setAppApiClient] = useState(props.apollo);
 
-      const addHeadersToApiClient = useCallback(({ headers }: { headers: object }) => {
-        const newApiClient = addHeaders({ headers });
-        setAppApiClient(newApiClient);
-      }, []);
+      const addHeadersToApiClient = useCallback(
+        ({ headers }: { headers: object }) => {
+          const newApiClient = addHeaders({ headers });
+          setAppApiClient(newApiClient);
+        },
+        []
+      );
 
-      const removeHeadersFromApiClient = useCallback(({ headers }: { headers: string[] }) => {
-        const newApiClient = removeHeaders({ headers });
-        setAppApiClient(newApiClient);
-      }, []);
+      const removeHeadersFromApiClient = useCallback(
+        ({ headers }: { headers: string[] }) => {
+          const newApiClient = removeHeaders({ headers });
+          setAppApiClient(newApiClient);
+        },
+        []
+      );
 
       const router = useRouter();
       return (

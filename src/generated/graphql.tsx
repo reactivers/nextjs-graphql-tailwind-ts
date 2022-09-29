@@ -80,7 +80,6 @@ export type Actor = {
   updated_at: Scalars['timestamptz'];
 };
 
-
 /** Actors */
 export type ActorMoviesArgs = {
   distinct_on?: InputMaybe<Array<Movie_Cast_Select_Column>>;
@@ -89,7 +88,6 @@ export type ActorMoviesArgs = {
   order_by?: InputMaybe<Array<Movie_Cast_Order_By>>;
   where?: InputMaybe<Movie_Cast_Bool_Exp>;
 };
-
 
 /** Actors */
 export type ActorMovies_AggregateArgs = {
@@ -100,7 +98,6 @@ export type ActorMovies_AggregateArgs = {
   where?: InputMaybe<Movie_Cast_Bool_Exp>;
 };
 
-
 /** Actors */
 export type ActorRatingsArgs = {
   distinct_on?: InputMaybe<Array<Actor_Rating_Select_Column>>;
@@ -109,7 +106,6 @@ export type ActorRatingsArgs = {
   order_by?: InputMaybe<Array<Actor_Rating_Order_By>>;
   where?: InputMaybe<Actor_Rating_Bool_Exp>;
 };
-
 
 /** Actors */
 export type ActorRatings_AggregateArgs = {
@@ -134,7 +130,6 @@ export type Actor_Aggregate_Fields = {
   max?: Maybe<Actor_Max_Fields>;
   min?: Maybe<Actor_Min_Fields>;
 };
-
 
 /** aggregate fields of "actor" */
 export type Actor_Aggregate_FieldsCountArgs = {
@@ -228,7 +223,6 @@ export type Actor_Rating_Aggregate_Fields = {
   var_samp?: Maybe<Actor_Rating_Var_Samp_Fields>;
   variance?: Maybe<Actor_Rating_Variance_Fields>;
 };
-
 
 /** aggregate fields of "actor_rating" */
 export type Actor_Rating_Aggregate_FieldsCountArgs = {
@@ -344,7 +338,7 @@ export enum Actor_Rating_Select_Column {
   /** column name */
   UpdatedAt = 'updated_at',
   /** column name */
-  UserId = 'user_id'
+  UserId = 'user_id',
 }
 
 /** aggregate stddev on columns */
@@ -437,7 +431,7 @@ export enum Actor_Select_Column {
   /** column name */
   Poster = 'poster',
   /** column name */
-  UpdatedAt = 'updated_at'
+  UpdatedAt = 'updated_at',
 }
 
 export type Date_Cast_Exp = {
@@ -480,7 +474,6 @@ export type Director = {
   user_prefs_aggregate: User_Director_Pref_Aggregate;
 };
 
-
 /** Directors */
 export type DirectorMoviesArgs = {
   distinct_on?: InputMaybe<Array<Movie_Select_Column>>;
@@ -489,7 +482,6 @@ export type DirectorMoviesArgs = {
   order_by?: InputMaybe<Array<Movie_Order_By>>;
   where?: InputMaybe<Movie_Bool_Exp>;
 };
-
 
 /** Directors */
 export type DirectorMovies_AggregateArgs = {
@@ -500,7 +492,6 @@ export type DirectorMovies_AggregateArgs = {
   where?: InputMaybe<Movie_Bool_Exp>;
 };
 
-
 /** Directors */
 export type DirectorRatingsArgs = {
   distinct_on?: InputMaybe<Array<Director_Rating_Select_Column>>;
@@ -509,7 +500,6 @@ export type DirectorRatingsArgs = {
   order_by?: InputMaybe<Array<Director_Rating_Order_By>>;
   where?: InputMaybe<Director_Rating_Bool_Exp>;
 };
-
 
 /** Directors */
 export type DirectorRatings_AggregateArgs = {
@@ -520,7 +510,6 @@ export type DirectorRatings_AggregateArgs = {
   where?: InputMaybe<Director_Rating_Bool_Exp>;
 };
 
-
 /** Directors */
 export type DirectorUser_PrefsArgs = {
   distinct_on?: InputMaybe<Array<User_Director_Pref_Select_Column>>;
@@ -529,7 +518,6 @@ export type DirectorUser_PrefsArgs = {
   order_by?: InputMaybe<Array<User_Director_Pref_Order_By>>;
   where?: InputMaybe<User_Director_Pref_Bool_Exp>;
 };
-
 
 /** Directors */
 export type DirectorUser_Prefs_AggregateArgs = {
@@ -554,7 +542,6 @@ export type Director_Aggregate_Fields = {
   max?: Maybe<Director_Max_Fields>;
   min?: Maybe<Director_Min_Fields>;
 };
-
 
 /** aggregate fields of "director" */
 export type Director_Aggregate_FieldsCountArgs = {
@@ -646,7 +633,6 @@ export type Director_Rating_Aggregate_Fields = {
   var_samp?: Maybe<Director_Rating_Var_Samp_Fields>;
   variance?: Maybe<Director_Rating_Variance_Fields>;
 };
-
 
 /** aggregate fields of "director_rating" */
 export type Director_Rating_Aggregate_FieldsCountArgs = {
@@ -762,7 +748,7 @@ export enum Director_Rating_Select_Column {
   /** column name */
   UpdatedAt = 'updated_at',
   /** column name */
-  UserId = 'user_id'
+  UserId = 'user_id',
 }
 
 /** aggregate stddev on columns */
@@ -853,7 +839,7 @@ export enum Director_Select_Column {
   /** column name */
   Lastname = 'lastname',
   /** column name */
-  UpdatedAt = 'updated_at'
+  UpdatedAt = 'updated_at',
 }
 
 /** Genres */
@@ -873,7 +859,6 @@ export type Genre = {
   user_prefs_aggregate: User_Genre_Pref_Aggregate;
 };
 
-
 /** Genres */
 export type GenreMovie_GenresArgs = {
   distinct_on?: InputMaybe<Array<Movie_Genre_Select_Column>>;
@@ -882,7 +867,6 @@ export type GenreMovie_GenresArgs = {
   order_by?: InputMaybe<Array<Movie_Genre_Order_By>>;
   where?: InputMaybe<Movie_Genre_Bool_Exp>;
 };
-
 
 /** Genres */
 export type GenreMovie_Genres_AggregateArgs = {
@@ -893,7 +877,6 @@ export type GenreMovie_Genres_AggregateArgs = {
   where?: InputMaybe<Movie_Genre_Bool_Exp>;
 };
 
-
 /** Genres */
 export type GenreUser_PrefsArgs = {
   distinct_on?: InputMaybe<Array<User_Genre_Pref_Select_Column>>;
@@ -902,7 +885,6 @@ export type GenreUser_PrefsArgs = {
   order_by?: InputMaybe<Array<User_Genre_Pref_Order_By>>;
   where?: InputMaybe<User_Genre_Pref_Bool_Exp>;
 };
-
 
 /** Genres */
 export type GenreUser_Prefs_AggregateArgs = {
@@ -927,7 +909,6 @@ export type Genre_Aggregate_Fields = {
   max?: Maybe<Genre_Max_Fields>;
   min?: Maybe<Genre_Min_Fields>;
 };
-
 
 /** aggregate fields of "genre" */
 export type Genre_Aggregate_FieldsCountArgs = {
@@ -985,7 +966,7 @@ export enum Genre_Select_Column {
   /** column name */
   Title = 'title',
   /** column name */
-  UpdatedAt = 'updated_at'
+  UpdatedAt = 'updated_at',
 }
 
 /** Movies */
@@ -1027,7 +1008,6 @@ export type Movie = {
   user_prefs_aggregate: User_Movie_Pref_Aggregate;
 };
 
-
 /** Movies */
 export type MovieActorsArgs = {
   distinct_on?: InputMaybe<Array<Movie_Cast_Select_Column>>;
@@ -1036,7 +1016,6 @@ export type MovieActorsArgs = {
   order_by?: InputMaybe<Array<Movie_Cast_Order_By>>;
   where?: InputMaybe<Movie_Cast_Bool_Exp>;
 };
-
 
 /** Movies */
 export type MovieActors_AggregateArgs = {
@@ -1047,7 +1026,6 @@ export type MovieActors_AggregateArgs = {
   where?: InputMaybe<Movie_Cast_Bool_Exp>;
 };
 
-
 /** Movies */
 export type MovieGenresArgs = {
   distinct_on?: InputMaybe<Array<Movie_Genre_Select_Column>>;
@@ -1056,7 +1034,6 @@ export type MovieGenresArgs = {
   order_by?: InputMaybe<Array<Movie_Genre_Order_By>>;
   where?: InputMaybe<Movie_Genre_Bool_Exp>;
 };
-
 
 /** Movies */
 export type MovieGenres_AggregateArgs = {
@@ -1067,7 +1044,6 @@ export type MovieGenres_AggregateArgs = {
   where?: InputMaybe<Movie_Genre_Bool_Exp>;
 };
 
-
 /** Movies */
 export type MovieRatingsArgs = {
   distinct_on?: InputMaybe<Array<Movie_Rating_Select_Column>>;
@@ -1076,7 +1052,6 @@ export type MovieRatingsArgs = {
   order_by?: InputMaybe<Array<Movie_Rating_Order_By>>;
   where?: InputMaybe<Movie_Rating_Bool_Exp>;
 };
-
 
 /** Movies */
 export type MovieRatings_AggregateArgs = {
@@ -1087,7 +1062,6 @@ export type MovieRatings_AggregateArgs = {
   where?: InputMaybe<Movie_Rating_Bool_Exp>;
 };
 
-
 /** Movies */
 export type MovieSimilar_MoviesArgs = {
   distinct_on?: InputMaybe<Array<Similar_Movie_Select_Column>>;
@@ -1096,7 +1070,6 @@ export type MovieSimilar_MoviesArgs = {
   order_by?: InputMaybe<Array<Similar_Movie_Order_By>>;
   where?: InputMaybe<Similar_Movie_Bool_Exp>;
 };
-
 
 /** Movies */
 export type MovieSimilar_Movies_AggregateArgs = {
@@ -1107,7 +1080,6 @@ export type MovieSimilar_Movies_AggregateArgs = {
   where?: InputMaybe<Similar_Movie_Bool_Exp>;
 };
 
-
 /** Movies */
 export type MovieUser_PrefsArgs = {
   distinct_on?: InputMaybe<Array<User_Movie_Pref_Select_Column>>;
@@ -1116,7 +1088,6 @@ export type MovieUser_PrefsArgs = {
   order_by?: InputMaybe<Array<User_Movie_Pref_Order_By>>;
   where?: InputMaybe<User_Movie_Pref_Bool_Exp>;
 };
-
 
 /** Movies */
 export type MovieUser_Prefs_AggregateArgs = {
@@ -1149,7 +1120,6 @@ export type Movie_Aggregate_Fields = {
   var_samp?: Maybe<Movie_Var_Samp_Fields>;
   variance?: Maybe<Movie_Variance_Fields>;
 };
-
 
 /** aggregate fields of "movie" */
 export type Movie_Aggregate_FieldsCountArgs = {
@@ -1241,7 +1211,6 @@ export type Movie_Cast_Aggregate_Fields = {
   min?: Maybe<Movie_Cast_Min_Fields>;
 };
 
-
 /** aggregate fields of "movie_cast" */
 export type Movie_Cast_Aggregate_FieldsCountArgs = {
   columns?: InputMaybe<Array<Movie_Cast_Select_Column>>;
@@ -1329,7 +1298,7 @@ export enum Movie_Cast_Select_Column {
   /** column name */
   MovieId = 'movie_id',
   /** column name */
-  UpdatedAt = 'updated_at'
+  UpdatedAt = 'updated_at',
 }
 
 /** Genres of the movies */
@@ -1360,7 +1329,6 @@ export type Movie_Genre_Aggregate_Fields = {
   max?: Maybe<Movie_Genre_Max_Fields>;
   min?: Maybe<Movie_Genre_Min_Fields>;
 };
-
 
 /** aggregate fields of "movie_genre" */
 export type Movie_Genre_Aggregate_FieldsCountArgs = {
@@ -1449,7 +1417,7 @@ export enum Movie_Genre_Select_Column {
   /** column name */
   MovieId = 'movie_id',
   /** column name */
-  UpdatedAt = 'updated_at'
+  UpdatedAt = 'updated_at',
 }
 
 /** aggregate max on columns */
@@ -1578,7 +1546,6 @@ export type Movie_Rating_Aggregate_Fields = {
   variance?: Maybe<Movie_Rating_Variance_Fields>;
 };
 
-
 /** aggregate fields of "movie_rating" */
 export type Movie_Rating_Aggregate_FieldsCountArgs = {
   columns?: InputMaybe<Array<Movie_Rating_Select_Column>>;
@@ -1693,7 +1660,7 @@ export enum Movie_Rating_Select_Column {
   /** column name */
   UpdatedAt = 'updated_at',
   /** column name */
-  UserId = 'user_id'
+  UserId = 'user_id',
 }
 
 /** aggregate stddev on columns */
@@ -1798,7 +1765,7 @@ export enum Movie_Select_Column {
   /** column name */
   TrailerEmbed = 'trailer_embed',
   /** column name */
-  UpdatedAt = 'updated_at'
+  UpdatedAt = 'updated_at',
 }
 
 /** aggregate stddev on columns */
@@ -1913,7 +1880,6 @@ export type Mutation_Root = {
   sign?: Maybe<SignOutput>;
 };
 
-
 /** mutation root */
 export type Mutation_RootSignArgs = {
   arg1: SignInput;
@@ -1950,7 +1916,7 @@ export enum Order_By {
   /** in descending order, nulls first */
   DescNullsFirst = 'desc_nulls_first',
   /** in descending order, nulls last */
-  DescNullsLast = 'desc_nulls_last'
+  DescNullsLast = 'desc_nulls_last',
 }
 
 export type Query_Root = {
@@ -2039,7 +2005,6 @@ export type Query_Root = {
   user_movie_pref_by_pk?: Maybe<User_Movie_Pref>;
 };
 
-
 export type Query_RootActorArgs = {
   distinct_on?: InputMaybe<Array<Actor_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2047,7 +2012,6 @@ export type Query_RootActorArgs = {
   order_by?: InputMaybe<Array<Actor_Order_By>>;
   where?: InputMaybe<Actor_Bool_Exp>;
 };
-
 
 export type Query_RootActor_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Actor_Select_Column>>;
@@ -2057,11 +2021,9 @@ export type Query_RootActor_AggregateArgs = {
   where?: InputMaybe<Actor_Bool_Exp>;
 };
 
-
 export type Query_RootActor_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Query_RootActor_RatingArgs = {
   distinct_on?: InputMaybe<Array<Actor_Rating_Select_Column>>;
@@ -2071,7 +2033,6 @@ export type Query_RootActor_RatingArgs = {
   where?: InputMaybe<Actor_Rating_Bool_Exp>;
 };
 
-
 export type Query_RootActor_Rating_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Actor_Rating_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2080,11 +2041,9 @@ export type Query_RootActor_Rating_AggregateArgs = {
   where?: InputMaybe<Actor_Rating_Bool_Exp>;
 };
 
-
 export type Query_RootActor_Rating_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Query_RootDirectorArgs = {
   distinct_on?: InputMaybe<Array<Director_Select_Column>>;
@@ -2094,7 +2053,6 @@ export type Query_RootDirectorArgs = {
   where?: InputMaybe<Director_Bool_Exp>;
 };
 
-
 export type Query_RootDirector_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Director_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2103,11 +2061,9 @@ export type Query_RootDirector_AggregateArgs = {
   where?: InputMaybe<Director_Bool_Exp>;
 };
 
-
 export type Query_RootDirector_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Query_RootDirector_RatingArgs = {
   distinct_on?: InputMaybe<Array<Director_Rating_Select_Column>>;
@@ -2117,7 +2073,6 @@ export type Query_RootDirector_RatingArgs = {
   where?: InputMaybe<Director_Rating_Bool_Exp>;
 };
 
-
 export type Query_RootDirector_Rating_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Director_Rating_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2126,11 +2081,9 @@ export type Query_RootDirector_Rating_AggregateArgs = {
   where?: InputMaybe<Director_Rating_Bool_Exp>;
 };
 
-
 export type Query_RootDirector_Rating_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Query_RootGenreArgs = {
   distinct_on?: InputMaybe<Array<Genre_Select_Column>>;
@@ -2140,7 +2093,6 @@ export type Query_RootGenreArgs = {
   where?: InputMaybe<Genre_Bool_Exp>;
 };
 
-
 export type Query_RootGenre_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Genre_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2149,11 +2101,9 @@ export type Query_RootGenre_AggregateArgs = {
   where?: InputMaybe<Genre_Bool_Exp>;
 };
 
-
 export type Query_RootGenre_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Query_RootMovieArgs = {
   distinct_on?: InputMaybe<Array<Movie_Select_Column>>;
@@ -2163,7 +2113,6 @@ export type Query_RootMovieArgs = {
   where?: InputMaybe<Movie_Bool_Exp>;
 };
 
-
 export type Query_RootMovie_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Movie_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2172,11 +2121,9 @@ export type Query_RootMovie_AggregateArgs = {
   where?: InputMaybe<Movie_Bool_Exp>;
 };
 
-
 export type Query_RootMovie_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Query_RootMovie_CastArgs = {
   distinct_on?: InputMaybe<Array<Movie_Cast_Select_Column>>;
@@ -2186,7 +2133,6 @@ export type Query_RootMovie_CastArgs = {
   where?: InputMaybe<Movie_Cast_Bool_Exp>;
 };
 
-
 export type Query_RootMovie_Cast_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Movie_Cast_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2195,11 +2141,9 @@ export type Query_RootMovie_Cast_AggregateArgs = {
   where?: InputMaybe<Movie_Cast_Bool_Exp>;
 };
 
-
 export type Query_RootMovie_Cast_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Query_RootMovie_GenreArgs = {
   distinct_on?: InputMaybe<Array<Movie_Genre_Select_Column>>;
@@ -2209,7 +2153,6 @@ export type Query_RootMovie_GenreArgs = {
   where?: InputMaybe<Movie_Genre_Bool_Exp>;
 };
 
-
 export type Query_RootMovie_Genre_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Movie_Genre_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2218,11 +2161,9 @@ export type Query_RootMovie_Genre_AggregateArgs = {
   where?: InputMaybe<Movie_Genre_Bool_Exp>;
 };
 
-
 export type Query_RootMovie_Genre_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Query_RootMovie_RatingArgs = {
   distinct_on?: InputMaybe<Array<Movie_Rating_Select_Column>>;
@@ -2232,7 +2173,6 @@ export type Query_RootMovie_RatingArgs = {
   where?: InputMaybe<Movie_Rating_Bool_Exp>;
 };
 
-
 export type Query_RootMovie_Rating_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Movie_Rating_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2241,11 +2181,9 @@ export type Query_RootMovie_Rating_AggregateArgs = {
   where?: InputMaybe<Movie_Rating_Bool_Exp>;
 };
 
-
 export type Query_RootMovie_Rating_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Query_RootSimilar_MovieArgs = {
   distinct_on?: InputMaybe<Array<Similar_Movie_Select_Column>>;
@@ -2255,7 +2193,6 @@ export type Query_RootSimilar_MovieArgs = {
   where?: InputMaybe<Similar_Movie_Bool_Exp>;
 };
 
-
 export type Query_RootSimilar_Movie_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Similar_Movie_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2264,11 +2201,9 @@ export type Query_RootSimilar_Movie_AggregateArgs = {
   where?: InputMaybe<Similar_Movie_Bool_Exp>;
 };
 
-
 export type Query_RootSimilar_Movie_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Query_RootUserArgs = {
   distinct_on?: InputMaybe<Array<User_Select_Column>>;
@@ -2278,7 +2213,6 @@ export type Query_RootUserArgs = {
   where?: InputMaybe<User_Bool_Exp>;
 };
 
-
 export type Query_RootUser_AggregateArgs = {
   distinct_on?: InputMaybe<Array<User_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2286,7 +2220,6 @@ export type Query_RootUser_AggregateArgs = {
   order_by?: InputMaybe<Array<User_Order_By>>;
   where?: InputMaybe<User_Bool_Exp>;
 };
-
 
 export type Query_RootUser_Director_PrefArgs = {
   distinct_on?: InputMaybe<Array<User_Director_Pref_Select_Column>>;
@@ -2296,7 +2229,6 @@ export type Query_RootUser_Director_PrefArgs = {
   where?: InputMaybe<User_Director_Pref_Bool_Exp>;
 };
 
-
 export type Query_RootUser_Director_Pref_AggregateArgs = {
   distinct_on?: InputMaybe<Array<User_Director_Pref_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2305,11 +2237,9 @@ export type Query_RootUser_Director_Pref_AggregateArgs = {
   where?: InputMaybe<User_Director_Pref_Bool_Exp>;
 };
 
-
 export type Query_RootUser_Director_Pref_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Query_RootUser_Genre_PrefArgs = {
   distinct_on?: InputMaybe<Array<User_Genre_Pref_Select_Column>>;
@@ -2319,7 +2249,6 @@ export type Query_RootUser_Genre_PrefArgs = {
   where?: InputMaybe<User_Genre_Pref_Bool_Exp>;
 };
 
-
 export type Query_RootUser_Genre_Pref_AggregateArgs = {
   distinct_on?: InputMaybe<Array<User_Genre_Pref_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2328,11 +2257,9 @@ export type Query_RootUser_Genre_Pref_AggregateArgs = {
   where?: InputMaybe<User_Genre_Pref_Bool_Exp>;
 };
 
-
 export type Query_RootUser_Genre_Pref_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Query_RootUser_Movie_PrefArgs = {
   distinct_on?: InputMaybe<Array<User_Movie_Pref_Select_Column>>;
@@ -2342,7 +2269,6 @@ export type Query_RootUser_Movie_PrefArgs = {
   where?: InputMaybe<User_Movie_Pref_Bool_Exp>;
 };
 
-
 export type Query_RootUser_Movie_Pref_AggregateArgs = {
   distinct_on?: InputMaybe<Array<User_Movie_Pref_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2350,7 +2276,6 @@ export type Query_RootUser_Movie_Pref_AggregateArgs = {
   order_by?: InputMaybe<Array<User_Movie_Pref_Order_By>>;
   where?: InputMaybe<User_Movie_Pref_Bool_Exp>;
 };
-
 
 export type Query_RootUser_Movie_Pref_By_PkArgs = {
   id: Scalars['uuid'];
@@ -2384,7 +2309,6 @@ export type Similar_Movie_Aggregate_Fields = {
   max?: Maybe<Similar_Movie_Max_Fields>;
   min?: Maybe<Similar_Movie_Min_Fields>;
 };
-
 
 /** aggregate fields of "similar_movie" */
 export type Similar_Movie_Aggregate_FieldsCountArgs = {
@@ -2473,7 +2397,7 @@ export enum Similar_Movie_Select_Column {
   /** column name */
   ParentMovieId = 'parent_movie_id',
   /** column name */
-  UpdatedAt = 'updated_at'
+  UpdatedAt = 'updated_at',
 }
 
 export type Subscription_Root = {
@@ -2562,7 +2486,6 @@ export type Subscription_Root = {
   user_movie_pref_by_pk?: Maybe<User_Movie_Pref>;
 };
 
-
 export type Subscription_RootActorArgs = {
   distinct_on?: InputMaybe<Array<Actor_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2570,7 +2493,6 @@ export type Subscription_RootActorArgs = {
   order_by?: InputMaybe<Array<Actor_Order_By>>;
   where?: InputMaybe<Actor_Bool_Exp>;
 };
-
 
 export type Subscription_RootActor_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Actor_Select_Column>>;
@@ -2580,11 +2502,9 @@ export type Subscription_RootActor_AggregateArgs = {
   where?: InputMaybe<Actor_Bool_Exp>;
 };
 
-
 export type Subscription_RootActor_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Subscription_RootActor_RatingArgs = {
   distinct_on?: InputMaybe<Array<Actor_Rating_Select_Column>>;
@@ -2594,7 +2514,6 @@ export type Subscription_RootActor_RatingArgs = {
   where?: InputMaybe<Actor_Rating_Bool_Exp>;
 };
 
-
 export type Subscription_RootActor_Rating_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Actor_Rating_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2603,11 +2522,9 @@ export type Subscription_RootActor_Rating_AggregateArgs = {
   where?: InputMaybe<Actor_Rating_Bool_Exp>;
 };
 
-
 export type Subscription_RootActor_Rating_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Subscription_RootDirectorArgs = {
   distinct_on?: InputMaybe<Array<Director_Select_Column>>;
@@ -2617,7 +2534,6 @@ export type Subscription_RootDirectorArgs = {
   where?: InputMaybe<Director_Bool_Exp>;
 };
 
-
 export type Subscription_RootDirector_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Director_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2626,11 +2542,9 @@ export type Subscription_RootDirector_AggregateArgs = {
   where?: InputMaybe<Director_Bool_Exp>;
 };
 
-
 export type Subscription_RootDirector_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Subscription_RootDirector_RatingArgs = {
   distinct_on?: InputMaybe<Array<Director_Rating_Select_Column>>;
@@ -2640,7 +2554,6 @@ export type Subscription_RootDirector_RatingArgs = {
   where?: InputMaybe<Director_Rating_Bool_Exp>;
 };
 
-
 export type Subscription_RootDirector_Rating_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Director_Rating_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2649,11 +2562,9 @@ export type Subscription_RootDirector_Rating_AggregateArgs = {
   where?: InputMaybe<Director_Rating_Bool_Exp>;
 };
 
-
 export type Subscription_RootDirector_Rating_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Subscription_RootGenreArgs = {
   distinct_on?: InputMaybe<Array<Genre_Select_Column>>;
@@ -2663,7 +2574,6 @@ export type Subscription_RootGenreArgs = {
   where?: InputMaybe<Genre_Bool_Exp>;
 };
 
-
 export type Subscription_RootGenre_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Genre_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2672,11 +2582,9 @@ export type Subscription_RootGenre_AggregateArgs = {
   where?: InputMaybe<Genre_Bool_Exp>;
 };
 
-
 export type Subscription_RootGenre_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Subscription_RootMovieArgs = {
   distinct_on?: InputMaybe<Array<Movie_Select_Column>>;
@@ -2686,7 +2594,6 @@ export type Subscription_RootMovieArgs = {
   where?: InputMaybe<Movie_Bool_Exp>;
 };
 
-
 export type Subscription_RootMovie_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Movie_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2695,11 +2602,9 @@ export type Subscription_RootMovie_AggregateArgs = {
   where?: InputMaybe<Movie_Bool_Exp>;
 };
 
-
 export type Subscription_RootMovie_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Subscription_RootMovie_CastArgs = {
   distinct_on?: InputMaybe<Array<Movie_Cast_Select_Column>>;
@@ -2709,7 +2614,6 @@ export type Subscription_RootMovie_CastArgs = {
   where?: InputMaybe<Movie_Cast_Bool_Exp>;
 };
 
-
 export type Subscription_RootMovie_Cast_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Movie_Cast_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2718,11 +2622,9 @@ export type Subscription_RootMovie_Cast_AggregateArgs = {
   where?: InputMaybe<Movie_Cast_Bool_Exp>;
 };
 
-
 export type Subscription_RootMovie_Cast_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Subscription_RootMovie_GenreArgs = {
   distinct_on?: InputMaybe<Array<Movie_Genre_Select_Column>>;
@@ -2732,7 +2634,6 @@ export type Subscription_RootMovie_GenreArgs = {
   where?: InputMaybe<Movie_Genre_Bool_Exp>;
 };
 
-
 export type Subscription_RootMovie_Genre_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Movie_Genre_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2741,11 +2642,9 @@ export type Subscription_RootMovie_Genre_AggregateArgs = {
   where?: InputMaybe<Movie_Genre_Bool_Exp>;
 };
 
-
 export type Subscription_RootMovie_Genre_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Subscription_RootMovie_RatingArgs = {
   distinct_on?: InputMaybe<Array<Movie_Rating_Select_Column>>;
@@ -2755,7 +2654,6 @@ export type Subscription_RootMovie_RatingArgs = {
   where?: InputMaybe<Movie_Rating_Bool_Exp>;
 };
 
-
 export type Subscription_RootMovie_Rating_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Movie_Rating_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2764,11 +2662,9 @@ export type Subscription_RootMovie_Rating_AggregateArgs = {
   where?: InputMaybe<Movie_Rating_Bool_Exp>;
 };
 
-
 export type Subscription_RootMovie_Rating_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Subscription_RootSimilar_MovieArgs = {
   distinct_on?: InputMaybe<Array<Similar_Movie_Select_Column>>;
@@ -2778,7 +2674,6 @@ export type Subscription_RootSimilar_MovieArgs = {
   where?: InputMaybe<Similar_Movie_Bool_Exp>;
 };
 
-
 export type Subscription_RootSimilar_Movie_AggregateArgs = {
   distinct_on?: InputMaybe<Array<Similar_Movie_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2787,11 +2682,9 @@ export type Subscription_RootSimilar_Movie_AggregateArgs = {
   where?: InputMaybe<Similar_Movie_Bool_Exp>;
 };
 
-
 export type Subscription_RootSimilar_Movie_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Subscription_RootUserArgs = {
   distinct_on?: InputMaybe<Array<User_Select_Column>>;
@@ -2801,7 +2694,6 @@ export type Subscription_RootUserArgs = {
   where?: InputMaybe<User_Bool_Exp>;
 };
 
-
 export type Subscription_RootUser_AggregateArgs = {
   distinct_on?: InputMaybe<Array<User_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2809,7 +2701,6 @@ export type Subscription_RootUser_AggregateArgs = {
   order_by?: InputMaybe<Array<User_Order_By>>;
   where?: InputMaybe<User_Bool_Exp>;
 };
-
 
 export type Subscription_RootUser_Director_PrefArgs = {
   distinct_on?: InputMaybe<Array<User_Director_Pref_Select_Column>>;
@@ -2819,7 +2710,6 @@ export type Subscription_RootUser_Director_PrefArgs = {
   where?: InputMaybe<User_Director_Pref_Bool_Exp>;
 };
 
-
 export type Subscription_RootUser_Director_Pref_AggregateArgs = {
   distinct_on?: InputMaybe<Array<User_Director_Pref_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2828,11 +2718,9 @@ export type Subscription_RootUser_Director_Pref_AggregateArgs = {
   where?: InputMaybe<User_Director_Pref_Bool_Exp>;
 };
 
-
 export type Subscription_RootUser_Director_Pref_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Subscription_RootUser_Genre_PrefArgs = {
   distinct_on?: InputMaybe<Array<User_Genre_Pref_Select_Column>>;
@@ -2842,7 +2730,6 @@ export type Subscription_RootUser_Genre_PrefArgs = {
   where?: InputMaybe<User_Genre_Pref_Bool_Exp>;
 };
 
-
 export type Subscription_RootUser_Genre_Pref_AggregateArgs = {
   distinct_on?: InputMaybe<Array<User_Genre_Pref_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2851,11 +2738,9 @@ export type Subscription_RootUser_Genre_Pref_AggregateArgs = {
   where?: InputMaybe<User_Genre_Pref_Bool_Exp>;
 };
 
-
 export type Subscription_RootUser_Genre_Pref_By_PkArgs = {
   id: Scalars['uuid'];
 };
-
 
 export type Subscription_RootUser_Movie_PrefArgs = {
   distinct_on?: InputMaybe<Array<User_Movie_Pref_Select_Column>>;
@@ -2865,7 +2750,6 @@ export type Subscription_RootUser_Movie_PrefArgs = {
   where?: InputMaybe<User_Movie_Pref_Bool_Exp>;
 };
 
-
 export type Subscription_RootUser_Movie_Pref_AggregateArgs = {
   distinct_on?: InputMaybe<Array<User_Movie_Pref_Select_Column>>;
   limit?: InputMaybe<Scalars['Int']>;
@@ -2873,7 +2757,6 @@ export type Subscription_RootUser_Movie_Pref_AggregateArgs = {
   order_by?: InputMaybe<Array<User_Movie_Pref_Order_By>>;
   where?: InputMaybe<User_Movie_Pref_Bool_Exp>;
 };
-
 
 export type Subscription_RootUser_Movie_Pref_By_PkArgs = {
   id: Scalars['uuid'];
@@ -2931,7 +2814,6 @@ export type User = {
   username: Scalars['String'];
 };
 
-
 /** Users */
 export type UserActor_RatingsArgs = {
   distinct_on?: InputMaybe<Array<Actor_Rating_Select_Column>>;
@@ -2940,7 +2822,6 @@ export type UserActor_RatingsArgs = {
   order_by?: InputMaybe<Array<Actor_Rating_Order_By>>;
   where?: InputMaybe<Actor_Rating_Bool_Exp>;
 };
-
 
 /** Users */
 export type UserActor_Ratings_AggregateArgs = {
@@ -2951,7 +2832,6 @@ export type UserActor_Ratings_AggregateArgs = {
   where?: InputMaybe<Actor_Rating_Bool_Exp>;
 };
 
-
 /** Users */
 export type UserDirector_PrefsArgs = {
   distinct_on?: InputMaybe<Array<User_Director_Pref_Select_Column>>;
@@ -2960,7 +2840,6 @@ export type UserDirector_PrefsArgs = {
   order_by?: InputMaybe<Array<User_Director_Pref_Order_By>>;
   where?: InputMaybe<User_Director_Pref_Bool_Exp>;
 };
-
 
 /** Users */
 export type UserDirector_Prefs_AggregateArgs = {
@@ -2971,7 +2850,6 @@ export type UserDirector_Prefs_AggregateArgs = {
   where?: InputMaybe<User_Director_Pref_Bool_Exp>;
 };
 
-
 /** Users */
 export type UserDirector_RatingsArgs = {
   distinct_on?: InputMaybe<Array<Director_Rating_Select_Column>>;
@@ -2980,7 +2858,6 @@ export type UserDirector_RatingsArgs = {
   order_by?: InputMaybe<Array<Director_Rating_Order_By>>;
   where?: InputMaybe<Director_Rating_Bool_Exp>;
 };
-
 
 /** Users */
 export type UserDirector_Ratings_AggregateArgs = {
@@ -2991,7 +2868,6 @@ export type UserDirector_Ratings_AggregateArgs = {
   where?: InputMaybe<Director_Rating_Bool_Exp>;
 };
 
-
 /** Users */
 export type UserGenre_PrefsArgs = {
   distinct_on?: InputMaybe<Array<User_Genre_Pref_Select_Column>>;
@@ -3000,7 +2876,6 @@ export type UserGenre_PrefsArgs = {
   order_by?: InputMaybe<Array<User_Genre_Pref_Order_By>>;
   where?: InputMaybe<User_Genre_Pref_Bool_Exp>;
 };
-
 
 /** Users */
 export type UserGenre_Prefs_AggregateArgs = {
@@ -3011,7 +2886,6 @@ export type UserGenre_Prefs_AggregateArgs = {
   where?: InputMaybe<User_Genre_Pref_Bool_Exp>;
 };
 
-
 /** Users */
 export type UserMovie_PrefsArgs = {
   distinct_on?: InputMaybe<Array<User_Movie_Pref_Select_Column>>;
@@ -3020,7 +2894,6 @@ export type UserMovie_PrefsArgs = {
   order_by?: InputMaybe<Array<User_Movie_Pref_Order_By>>;
   where?: InputMaybe<User_Movie_Pref_Bool_Exp>;
 };
-
 
 /** Users */
 export type UserMovie_Prefs_AggregateArgs = {
@@ -3031,7 +2904,6 @@ export type UserMovie_Prefs_AggregateArgs = {
   where?: InputMaybe<User_Movie_Pref_Bool_Exp>;
 };
 
-
 /** Users */
 export type UserMovie_RatingsArgs = {
   distinct_on?: InputMaybe<Array<Movie_Rating_Select_Column>>;
@@ -3040,7 +2912,6 @@ export type UserMovie_RatingsArgs = {
   order_by?: InputMaybe<Array<Movie_Rating_Order_By>>;
   where?: InputMaybe<Movie_Rating_Bool_Exp>;
 };
-
 
 /** Users */
 export type UserMovie_Ratings_AggregateArgs = {
@@ -3065,7 +2936,6 @@ export type User_Aggregate_Fields = {
   max?: Maybe<User_Max_Fields>;
   min?: Maybe<User_Min_Fields>;
 };
-
 
 /** aggregate fields of "user" */
 export type User_Aggregate_FieldsCountArgs = {
@@ -3119,7 +2989,6 @@ export type User_Director_Pref_Aggregate_Fields = {
   max?: Maybe<User_Director_Pref_Max_Fields>;
   min?: Maybe<User_Director_Pref_Min_Fields>;
 };
-
 
 /** aggregate fields of "user_director_pref" */
 export type User_Director_Pref_Aggregate_FieldsCountArgs = {
@@ -3208,7 +3077,7 @@ export enum User_Director_Pref_Select_Column {
   /** column name */
   UpdatedAt = 'updated_at',
   /** column name */
-  UserId = 'user_id'
+  UserId = 'user_id',
 }
 
 /** Genre prefs of the users */
@@ -3229,7 +3098,6 @@ export type User_Genre_Pref = {
   user_id: Scalars['uuid'];
 };
 
-
 /** Genre prefs of the users */
 export type User_Genre_PrefMovie_GenresArgs = {
   distinct_on?: InputMaybe<Array<Movie_Genre_Select_Column>>;
@@ -3238,7 +3106,6 @@ export type User_Genre_PrefMovie_GenresArgs = {
   order_by?: InputMaybe<Array<Movie_Genre_Order_By>>;
   where?: InputMaybe<Movie_Genre_Bool_Exp>;
 };
-
 
 /** Genre prefs of the users */
 export type User_Genre_PrefMovie_Genres_AggregateArgs = {
@@ -3263,7 +3130,6 @@ export type User_Genre_Pref_Aggregate_Fields = {
   max?: Maybe<User_Genre_Pref_Max_Fields>;
   min?: Maybe<User_Genre_Pref_Min_Fields>;
 };
-
 
 /** aggregate fields of "user_genre_pref" */
 export type User_Genre_Pref_Aggregate_FieldsCountArgs = {
@@ -3354,7 +3220,7 @@ export enum User_Genre_Pref_Select_Column {
   /** column name */
   UpdatedAt = 'updated_at',
   /** column name */
-  UserId = 'user_id'
+  UserId = 'user_id',
 }
 
 /** aggregate max on columns */
@@ -3395,7 +3261,6 @@ export type User_Movie_Pref = {
   user_id: Scalars['uuid'];
 };
 
-
 /** Movies pref of the users */
 export type User_Movie_PrefSimilar_MoviesArgs = {
   distinct_on?: InputMaybe<Array<Similar_Movie_Select_Column>>;
@@ -3404,7 +3269,6 @@ export type User_Movie_PrefSimilar_MoviesArgs = {
   order_by?: InputMaybe<Array<Similar_Movie_Order_By>>;
   where?: InputMaybe<Similar_Movie_Bool_Exp>;
 };
-
 
 /** Movies pref of the users */
 export type User_Movie_PrefSimilar_Movies_AggregateArgs = {
@@ -3429,7 +3293,6 @@ export type User_Movie_Pref_Aggregate_Fields = {
   max?: Maybe<User_Movie_Pref_Max_Fields>;
   min?: Maybe<User_Movie_Pref_Min_Fields>;
 };
-
 
 /** aggregate fields of "user_movie_pref" */
 export type User_Movie_Pref_Aggregate_FieldsCountArgs = {
@@ -3520,7 +3383,7 @@ export enum User_Movie_Pref_Select_Column {
   /** column name */
   UpdatedAt = 'updated_at',
   /** column name */
-  UserId = 'user_id'
+  UserId = 'user_id',
 }
 
 /** Ordering options when selecting data from "user". */
@@ -3549,7 +3412,7 @@ export enum User_Select_Column {
   /** column name */
   UpdatedAt = 'updated_at',
   /** column name */
-  Username = 'username'
+  Username = 'username',
 }
 
 export type Uuid_Cast_Exp = {
@@ -3570,21 +3433,22 @@ export type Uuid_Comparison_Exp = {
   _nin?: InputMaybe<Array<Scalars['uuid']>>;
 };
 
-export type GetMoviesQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetMoviesQueryVariables = Exact<{ [key: string]: never }>;
 
-
-export type GetMoviesQuery = { __typename?: 'query_root', movie: Array<{ __typename?: 'movie', id: any, title: string, poster?: string | null }> };
-
+export type GetMoviesQuery = {
+  __typename?: 'query_root';
+  movie: Array<{ __typename?: 'movie'; id: any; title: string; poster?: string | null }>;
+};
 
 export const GetMoviesDocument = gql`
-    query getMovies {
-  movie {
-    id
-    title
-    poster
+  query getMovies {
+    movie {
+      id
+      title
+      poster
+    }
   }
-}
-    `;
+`;
 
 /**
  * __useGetMoviesQuery__
@@ -3601,14 +3465,18 @@ export const GetMoviesDocument = gql`
  *   },
  * });
  */
-export function useGetMoviesQuery(baseOptions?: Apollo.QueryHookOptions<GetMoviesQuery, GetMoviesQueryVariables>) {
-        const options = {...defaultOptions, ...baseOptions}
-        return Apollo.useQuery<GetMoviesQuery, GetMoviesQueryVariables>(GetMoviesDocument, options);
-      }
-export function useGetMoviesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetMoviesQuery, GetMoviesQueryVariables>) {
-          const options = {...defaultOptions, ...baseOptions}
-          return Apollo.useLazyQuery<GetMoviesQuery, GetMoviesQueryVariables>(GetMoviesDocument, options);
-        }
+export function useGetMoviesQuery(
+  baseOptions?: Apollo.QueryHookOptions<GetMoviesQuery, GetMoviesQueryVariables>
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useQuery<GetMoviesQuery, GetMoviesQueryVariables>(GetMoviesDocument, options);
+}
+export function useGetMoviesLazyQuery(
+  baseOptions?: Apollo.LazyQueryHookOptions<GetMoviesQuery, GetMoviesQueryVariables>
+) {
+  const options = { ...defaultOptions, ...baseOptions };
+  return Apollo.useLazyQuery<GetMoviesQuery, GetMoviesQueryVariables>(GetMoviesDocument, options);
+}
 export type GetMoviesQueryHookResult = ReturnType<typeof useGetMoviesQuery>;
 export type GetMoviesLazyQueryHookResult = ReturnType<typeof useGetMoviesLazyQuery>;
 export type GetMoviesQueryResult = Apollo.QueryResult<GetMoviesQuery, GetMoviesQueryVariables>;

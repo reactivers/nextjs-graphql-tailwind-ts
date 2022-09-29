@@ -6,4 +6,4 @@ services:
     restart: always
     container_name: nextjs-graphql-tailwind-ts
     ports:
-      - "4050:3000"
+      - '4050:3000'

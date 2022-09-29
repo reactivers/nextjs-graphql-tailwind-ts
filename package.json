@@ -40,7 +40,8 @@
     "cypress": "NEXT_PUBLIC_APP_ENV=test cypress open",
     "cypress:headless": "NEXT_PUBLIC_APP_ENV=test cypress run",
     "e2e": "npm run build-test && start-server-and-test start-test http://localhost:3000 cypress",
-    "e2e:headless": "npm run build-test && start-server-and-test start-test http://localhost:3000 cypress:headless"
+    "e2e:headless": "npm run build-test && start-server-and-test start-test http://localhost:3000 cypress:headless",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
@@ -72,7 +73,7 @@
     "eslint-config-next": "12.1.6",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
     "next-sitemap": "^3.1.21",
     "prettier": "^2.7.1",

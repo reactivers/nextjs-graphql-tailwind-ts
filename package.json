@@ -1,11 +1,13 @@
 {
   "name": "@reactivers/nextjs-graphql-tailwind-ts",
-  "version": "1.0.0",
-  "description": "NextJS, Tailwind, Typescript boilerplate",
+  "version": "1.0.1",
+  "description": "NextJS, GraphQL, Tailwind, Typescript, Cypress boilerplate",
   "keywords": [
     "NextJS",
     "Tailwindcss",
     "Tailwind",
+    "GraphQL",
+    "Cypress",
     "Typescript"
   ],
   "bugs": {

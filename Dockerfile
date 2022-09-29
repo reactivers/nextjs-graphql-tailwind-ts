@@ -3,7 +3,9 @@ WORKDIR /usr/src/app
 COPY . .
 RUN npm i -g yarn
 RUN yarn install --frozen-lockfile --network-timeout 100000
+RUN npm run generate-test
 RUN npm run e2e:headless
+RUN npm run generate
 RUN npm run export
 RUN npm run sitemap
 

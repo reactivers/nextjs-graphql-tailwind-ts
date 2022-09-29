@@ -83,7 +83,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx,js,md,css,html}": [
-      "prettier --trailing-comma es5 --print-width 100 --write"
+      "prettier --trailing-comma es5 --print-width 100 --write && echo \"run\""
     ],
     "package.json": [
       "prettier --parser json"

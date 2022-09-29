@@ -3,7 +3,7 @@ import { NextPage } from 'next/types';
 
 const Home: NextPage = () => {
     const { data } = useGetMoviesQuery()
-    const movies = data?.movie || []
+    const movies = data?.movie || [];
 
     return (
         <div className='w-full flex justify-center'>

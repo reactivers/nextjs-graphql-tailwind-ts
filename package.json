@@ -1,7 +1,8 @@
 {
   "name": "@reactivers/nextjs-graphql-tailwind-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NextJS, GraphQL, Tailwind, Typescript, Cypress boilerplate",
+  "license": "ISC",
   "keywords": [
     "NextJS",
     "Tailwindcss",
@@ -23,30 +24,33 @@
     "@reactivers/nextjs-graphql-tailwind-ts": "./bin/index.js"
   },
   "scripts": {
-    "dev": "rm -rf out .next && NEXT_PUBLIC_APP_ENV=development next dev",
-    "dev-prod": "rm -rf out .next && NEXT_PUBLIC_APP_ENV=production next dev",
-    "build": "rm -rf out .next && NEXT_PUBLIC_APP_ENV=production next build",
-    "build-dev": "rm -rf out .next && NEXT_PUBLIC_APP_ENV=development next build",
-    "build-test": "rm -rf out .next && NEXT_PUBLIC_APP_ENV=test next build",
+    "rimraf": "npx rimraf",
+    "dev": "npm run rimraf out .next && NEXT_PUBLIC_APP_ENV=development next dev",
+    "dev:prod": "npm run rimraf out .next && NEXT_PUBLIC_APP_ENV=production next dev",
+    "build": "npm run rimraf out .next && NEXT_PUBLIC_APP_ENV=production next build",
+    "build:dev": "npm run rimraf out .next && NEXT_PUBLIC_APP_ENV=development next build",
+    "build:test": "npm run rimraf out .next && NEXT_PUBLIC_APP_ENV=test next build",
     "start": "NEXT_PUBLIC_APP_ENV=production next start",
-    "start-dev": "NEXT_PUBLIC_APP_ENV=development next start",
-    "start-test": "NEXT_PUBLIC_APP_ENV=test next start",
+    "start:dev": "NEXT_PUBLIC_APP_ENV=development next start",
+    "start:test": "NEXT_PUBLIC_APP_ENV=test next start",
     "export": "npm run build && next export",
-    "export-dev": "npm run build-dev && next export",
-    "export-test": "npm run build-test && next export",
-    "generate-dev": "APP_ENV=development graphql-codegen --config codegen.js",
-    "generate-test": "APP_ENV=test graphql-codegen --config codegen.js",
+    "export:dev": "npm run build:dev && next export",
+    "export:test": "npm run build:test && next export",
     "generate": "APP_ENV=production graphql-codegen --config codegen.js",
-    "lint": "next lint",
+    "generate:dev": "APP_ENV=development graphql-codegen --config codegen.js",
+    "generate:test": "APP_ENV=test graphql-codegen --config codegen.js",
     "sitemap": "npx next-sitemap",
     "cypress": "NEXT_PUBLIC_APP_ENV=test cypress open",
     "cypress:headless": "NEXT_PUBLIC_APP_ENV=test cypress run",
-    "e2e": "npm run build-test && start-server-and-test start-test http://localhost:3000 cypress",
-    "e2e:headless": "npm run build-test && start-server-and-test start-test http://localhost:3000 cypress:headless",
+    "e2e": "npm run build:test && start-server-and-test start:test http://localhost:3000 cypress",
+    "e2e:headless": "npm run build:test && start-server-and-test start:test http://localhost:3000 cypress:headless",
+    "lint": "next lint",
+    "format": "npx prettier --write \"src/**/*.{ts,tsx}\" \"pages/**/*.{ts,tsx}\"",
     "prepare": "husky install"
   },
   "dependencies": {
     "@apollo/client": "^3.6.9",
+    "@next/env": "^13.2.4",
     "autoprefixer": "^10.4.7",
     "classnames": "^2.3.1",
     "graphql": "^16.5.0",
@@ -60,6 +64,8 @@
     "tailwindcss": "^3.1.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.5.0",
+    "@commitlint/config-conventional": "^17.4.4",
     "@graphql-codegen/cli": "2.6.2",
     "@graphql-codegen/introspection": "2.1.1",
     "@graphql-codegen/typescript": "2.4.8",
@@ -69,26 +75,18 @@
     "@types/node": "18.0.0",
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
     "cypress": "^10.9.0",
     "dotenv": "^16.0.1",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.0",
-    "lint-staged": "^13.0.3",
+    "husky": "^8.0.3",
     "next-sitemap": "^3.1.21",
-    "prettier": "^2.7.1",
     "start-server-and-test": "^1.14.0",
     "ts-node": "^10.9.1",
     "typescript": "4.7.4"
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,css,html}": [
-      "prettier --write ."
-    ],
-    "package.json": [
-      "prettier --parser json"
-    ]
   }
 }

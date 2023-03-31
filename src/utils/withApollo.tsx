@@ -33,7 +33,7 @@ const withApollo = nextWithApollo(
           const newApiClient = addHeaders({ headers });
           setAppApiClient(newApiClient);
         },
-        []
+        [],
       );
 
       const removeHeadersFromApiClient = useCallback(
@@ -41,7 +41,7 @@ const withApollo = nextWithApollo(
           const newApiClient = removeHeaders({ headers });
           setAppApiClient(newApiClient);
         },
-        []
+        [],
       );
 
       const router = useRouter();
@@ -57,7 +57,7 @@ const withApollo = nextWithApollo(
         </ApolloProvider>
       );
     },
-  }
+  },
 );
 
 export default withApollo;

@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
-echo "pre commit worked"
-npm run e2e:headless
-npx lint-staged && git add .
+echo "pre-commit is working"
+yarn format &&
+    yarn lint &&
+    yarn generate:test &&
+    yarn e2e:headless &&
+    git add .

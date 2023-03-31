@@ -7,7 +7,6 @@ config({
 const IS_SECURE = process.env.NEXT_PUBLIC_SECURE === "true";
 const securePart = IS_SECURE ? "s" : "";
 const HASURA_HOST = `http${securePart}://${process.env.NEXT_PUBLIC_API_HOST}`;
-console.log("HASURA_HOST", HASURA_HOST);
 
 module.exports = {
   schema: [

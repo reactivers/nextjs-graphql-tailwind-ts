@@ -26,7 +26,7 @@ const wsLink = ({ headers = {} }: { headers?: object } = {}) =>
               ...headers,
             },
           }),
-        })
+        }),
       )
     : null;
 
@@ -41,7 +41,7 @@ const splitLink = (params?: any) =>
           );
         },
         wsLink(params)!,
-        httpLink(params)
+        httpLink(params),
       )
     : httpLink(params);
 
@@ -72,7 +72,7 @@ const addHeaders = ({ headers } = { headers: {} }) => {
 };
 
 const removeHeaders = (
-  { headers }: { headers: string[] } = { headers: [] }
+  { headers }: { headers: string[] } = { headers: [] },
 ) => {
   headers.forEach((header) => {
     delete initialHeaders[header];

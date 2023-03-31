@@ -1,6 +1,6 @@
 {
   "name": "@reactivers/nextjs-graphql-tailwind-ts",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "NextJS, GraphQL, Tailwind, Typescript, Cypress boilerplate",
   "license": "ISC",
   "keywords": [

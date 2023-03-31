@@ -56,9 +56,9 @@ const removeExtraFiles = async (projectName, projectPath) => {
   fs.rmSync(path.join(projectPath, "bin"), { recursive: true });
   let packageJSONData = await readFile(path.join(projectPath, "package.json"));
   const packageJSON = JSON.parse(packageJSONData);
-  packageJSON.title = projectName;
+  packageJSON.name = projectName;
   packageJSON.version = "1.0.0";
-  packageJSON.description = "Created with @reactivers/nextjs-tailwind-ts";
+  packageJSON.description = `Created with @reactivers/${PACKAGE_NAME}`;
   delete packageJSON["keywords"];
   delete packageJSON["bugs"];
   delete packageJSON["homepage"];

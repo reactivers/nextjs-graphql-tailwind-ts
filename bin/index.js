@@ -54,6 +54,7 @@ const installDependencies = () => {
 const removeExtraFiles = async (projectName, projectPath) => {
   console.log("Removing useless files");
   fs.rmSync(path.join(projectPath, "bin"), { recursive: true });
+  fs.rmSync(path.join(projectPath, ".git"), { recursive: true });
   let packageJSONData = await readFile(path.join(projectPath, "package.json"));
   const packageJSON = JSON.parse(packageJSONData);
   packageJSON.name = projectName;

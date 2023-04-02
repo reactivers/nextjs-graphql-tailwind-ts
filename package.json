@@ -1,6 +1,6 @@
 {
   "name": "@reactivers/nextjs-graphql-tailwind-ts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "NextJS, GraphQL, Tailwind, Typescript, Cypress boilerplate",
   "license": "ISC",
   "keywords": [
@@ -81,8 +81,6 @@
     "dotenv": "^16.0.1",
     "eslint": "8.18.0",
     "eslint-config-next": "12.1.6",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
     "next-sitemap": "^3.1.21",
     "start-server-and-test": "^1.14.0",

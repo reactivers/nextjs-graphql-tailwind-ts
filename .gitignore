@@ -26,8 +26,6 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-src/generated/graphql.tsx
-
 # local env files
 .env*.local
 

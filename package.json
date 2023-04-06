@@ -1,6 +1,6 @@
 {
   "name": "@reactivers/nextjs-graphql-tailwind-ts",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "NextJS, GraphQL, Tailwind, Typescript, Cypress boilerplate",
   "license": "ISC",
   "keywords": [
@@ -44,7 +44,7 @@
     "cypress:headless": "NEXT_PUBLIC_APP_ENV=test cypress run",
     "e2e": "npm run build:test && start-server-and-test start:test http://localhost:3000 cypress",
     "e2e:headless": "npm run build:test && start-server-and-test start:test http://localhost:3000 cypress:headless",
-    "lint": "next lint",
+    "lint": "eslint ./ --ext .ts --ext .tsx",
     "format": "npx prettier --write \"src/**/*.{ts,tsx}\" \"pages/**/*.{ts,tsx}\"",
     "prepare": "husky install"
   },

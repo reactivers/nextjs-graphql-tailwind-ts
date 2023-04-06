@@ -4,9 +4,8 @@ import { getMainDefinition } from "@apollo/client/utilities";
 import { createClient } from "graphql-ws";
 import { GQL_HTTP_API, GQL_WS_API } from "utils/constants";
 import { isBrowser } from "utils/functions";
-import { Dict } from "utils/types";
 
-let initialHeaders: Dict<string> = isBrowser() ? {} : {};
+let initialHeaders: Record<string, string> = isBrowser() ? {} : {};
 const httpLink = ({ headers }: { headers?: object } = {}) =>
   new HttpLink({
     uri: GQL_HTTP_API,
@@ -30,9 +29,11 @@ const wsLink = ({ headers = {} }: { headers?: object } = {}) =>
       )
     : null;
 
-const splitLink = (params?: any) =>
-  typeof window !== "undefined"
-    ? split(
+const splitLink = (params?: object) => {
+  if (isBrowser()) {
+    const wslink = wsLink(params);
+    if (wslink !== null) {
+      return split(
         ({ query }) => {
           const definition = getMainDefinition(query);
           return (
@@ -40,10 +41,13 @@ const splitLink = (params?: any) =>
             definition.operation === "subscription"
           );
         },
-        wsLink(params)!,
+        wslink,
         httpLink(params),
-      )
-    : httpLink(params);
+      );
+    }
+  }
+  return httpLink(params);
+};
 
 const createApiClient = () =>
   new ApolloClient({
@@ -56,11 +60,9 @@ let apiClient = createApiClient();
 
 const getApiClient = (initialState = {}, headers = {}) => {
   initialHeaders = { ...initialHeaders, ...headers };
-  const newApiClient = createApiClient();
-  newApiClient.setLink(splitLink({ headers: initialHeaders }));
-  newApiClient.restore(initialState);
-  apiClient = newApiClient;
-  return newApiClient;
+  apiClient.setLink(splitLink({ headers: initialHeaders }));
+  apiClient.restore(initialState);
+  return apiClient;
 };
 
 const addHeaders = ({ headers } = { headers: {} }) => {

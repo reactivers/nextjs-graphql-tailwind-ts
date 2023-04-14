@@ -2,7 +2,9 @@ FROM cypress/included:10.9.0 as base
 WORKDIR /usr/src/app
 COPY . .
 RUN npm i -g yarn
+COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile --network-timeout 100000
+COPY . .
 RUN npm run generate:test
 RUN npm run e2e:headless
 RUN npm run generate

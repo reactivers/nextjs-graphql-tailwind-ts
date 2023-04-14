@@ -1,0 +1,5 @@
+.husky
+.next
+out
+node_modules
+environments/.env.development

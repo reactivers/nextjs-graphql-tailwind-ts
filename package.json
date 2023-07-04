@@ -1,6 +1,6 @@
 {
   "name": "@reactivers/nextjs-graphql-tailwind-ts",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "NextJS, GraphQL, Tailwind, Typescript, Cypress boilerplate",
   "license": "ISC",
   "keywords": [
@@ -34,6 +34,7 @@
     "start:dev": "NEXT_PUBLIC_APP_ENV=development next start",
     "start:test": "NEXT_PUBLIC_APP_ENV=test next start",
     "export": "npm run build && next export",
+    "export:only": "next export",
     "export:dev": "npm run build:dev && next export",
     "export:test": "npm run build:test && next export",
     "generate": "APP_ENV=production graphql-codegen --config codegen.js",
